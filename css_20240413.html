@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 基本介紹</title>
+    <title>CSS</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <!--
-        <div>:沒有預設樣式的區塊性標籤(block)
-        <span>:沒有預設樣式的行內型標籤(inline)
+        區塊的寬高(無法使用在inline行內型的標籤中)
+            width:預設和父標籤一樣寬
+            heught:預設會自動根據內容縮放
     -->
     <div class="title" id="title-1">第一段的標題</div>
     <div class="content">
         今天<span class="keyword underline">天氣</span>不錯
+    </div>
+
+    <div class="title">第二段的標題</div>
+    <div class="content">
+        今天<span class="keyword">心情</span>不錯
     </div>
 </body>
 </html>

@@ -1,0 +1,19 @@
+/*以下是CSS Selector選擇器:
+(1)class選擇器:名字前面加一個.
+(2)id選擇器:名字前面加一個#
+(3)標籤名稱選擇器:直接寫標籤名稱*/
+.title{
+    margin-bottom: 10px /*元素跟元素間的間距*/;
+    font-size:100px /*字的大小*/;
+    font-weight:bold /*字體的粗細*/}
+.content{
+    width: 300px;
+    padding: 100px;
+    border: 1px dashed blue;
+    color: green}
+.keyword{color: red}
+.underline{text-decoration:underline}
+
+#title-1{text-decoration:line-through}
+
+body{background-color: #dddddd}

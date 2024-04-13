@@ -1,0 +1,50 @@
+.title{
+    font-size:50px /*字的大小*/;
+    font-weight:bold; /*字體的粗細*/
+    background-color: black;
+    color:#dddddd;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+}
+.title_search{
+    font-size:50px /*字的大小*/;
+    font-weight:bold; /*字體的粗細*/
+    background-color: black;
+    color:#dddddd;
+    padding:15px;
+    display: flex;
+}
+.welcome{
+    padding: 100px;
+    border: solid gray;
+    color: black;
+    text-align:center;
+    font-size:50px /*字的大小*/;
+}
+.main{
+    display: flex;/*讓內部區塊水平排列*/
+    justify-content: center;/*控制內部區塊的水平對齊方式*/
+    flex-wrap: wrap;/*允許內部區塊隨著空間變化排列*/
+}
+.box{
+    background-color: #ffcccc;
+    width: 280px;
+    margin: 10px;
+}
+/*CSS Media Query*/
+@media (max-width:1200px){
+    /*螢幕尺寸小於1200px時，套用這個區塊的設定*/
+    .box{
+        width: 40%;
+    }
+    .welcome{
+        background-color: #ddffdd;
+    }
+}
+@media (max-width:500px){
+    /*螢幕尺寸小於500px時，套用這個區塊的設定*/
+    .box{
+        width: 90%;
+    }
+}
