@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+       //console.log("")指的是把訊息丟到終端機，等於print
+       /*數字
+       3;
+       3.14;
+       -5;
+        //字串:用來表達任意的文字
+        "哈嘍";
+        'Hello World';
+        //布林值
+        true;
+        false;
+        //空值
+        undefined;
+        null;
+        //在終端機印出資料 console.log(資料);
+        console.log(123, "哈嘍~", null, true);*/
+
+        //變數:用來存放資料的名字
+        //宣告變數 > 使用已經宣告過的變數代替資料進行運作
+        /*let abc = 10;//宣告變數 let 變數名稱，把資料指定給變數   變數名稱=資料
+        console.log(abc);//使用已經宣告的abc變數，代替資料進行運作
+        abc = "ihdohih";
+        console.log(abc);
+        abc = true;
+        console.log(abc);
+        let x = null;//宣告變數同時指定資料 let 變數名稱 = 資料
+        console.log(abc, x);*/
+
+        //運算符號
+        //算術運算 +, -, *, /, %
+        let x = 3 * 4 % 7;
+        console.log(x);
+        //指定運算 +*, -=, *=, /=, %=
+        x += 1;
+        x -= 5;
+        console.log(x);
+        //比較運算 >, <, >=, <=, ==, !=
+        let jffhhhhi = 3 > 4;
+        console.log(jffhhhhi);
+        jffhhhhi = "Hello" == "hello";
+        console.log(jffhhhhi);
+        //單元運算++, --, !
+        let y = !true;
+        console.log(y);
+        y = 10;
+        y++;
+        console.log(y);
+        //邏輯運算&&, ||
+        let result = true && false;
+        console.log(result);
+        result = true || false;
+        console.log(result);
+        /*
+            && and  且
+            a  b   a&&b
+            o  o    o
+            o  x    x
+            x  o    x
+            x  x    x
+
+            || or   或
+            a  b    a || b
+            o  o    o
+            o  x    o
+            x  o    o
+            x  x    x
+        */
+
+        //計算[1+2+3+...+10的總和] 乘以 [10+11+12+...+20的總和]
+        //請使用者輸入兩個數字，計算乘法的結果
+        //請使用者輸入    prompt(字串,字串)
+        let a = prompt("請輸入第一個數字:", "");
+        let b = prompt("請輸入第二個數字:", "");
+        let sum = a * b;
+        console.log("兩個數字相乘為:%d" ,sum);
+    </script>
+</body>
+</html>
