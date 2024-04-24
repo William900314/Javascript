@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        //函式:用來包裝一段程式碼
+        //建立函式 > 呼叫已經建立好的函式
+        /*
+            建立函式的語法:
+                function函式名稱(參數名稱,參數名稱,...){
+                    函式對應的程式區塊
+                }
+                let 函式名稱 = function(參數名稱,參數名稱,...){
+                    函式對應的程式碼
+                };
+                let 函式名稱 =(參數名稱,參數名稱,...)=>{
+                    函式對應的程式碼
+                };
+            呼叫函式的語法:
+                函式名稱(參數資料,參數資料,...)
+        function show(message){
+            console.log(message);
+        }
+        console.log("Outside");
+        show(true);
+        show(15);
+        show("Hello World!");
+        */
+        //let number = prompt("請輸入一個數字: ", "");
+        //console.log(number);
+        /*function add(n1 , n2){
+            //強制結束函式 return;
+            //強制結束函式，並帶出回傳值/回傳的資料  return 資料;
+            console.log(n1 + n2);
+            return n1 + n2;
+        }
+        let result = add(3 , 4);
+        console.log(result);
+        */
+
+       /*function prompt(reminder, defaultValue){
+            根據 reminder和defaultValue產生輸入框
+       }*/
+
+       //基本的運作、參數、回傳值
+       function calculate(n1, n2){
+            let result = 0;
+            while(n1 <= n2){
+                result += n1;
+                n1++;
+            }
+            console.log(result);
+       }
+       calculate(2,5);//計算2+3+4+5的總和，印出14
+       calculate(-2,3);//計算(-2)+(-1)+0+1+2+3，印出3
+       calculate(1,100);//計算1+2+3+...+100的總和，印出5050
+       
+
+       //資料:數字、字串、布林值、空值、函式
+       /*let x = 3;  //let變數名稱 = 資料;
+       console.log(x);
+       let y = x;
+       console.log(y);
+
+       let add = function(n1 , n2){
+            return n1 + n2;
+        }
+        //console.log(add);
+        let newName = add;
+        let ans = newName(5,6);
+        console.log(ans);
+        add = 10;
+        console.log(add+10);
+        */
+    </script>
+</body>
+</html>

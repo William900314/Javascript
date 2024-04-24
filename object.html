@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件Object</title>
+</head>
+<body>
+    <script>
+        //資料:數字、字串、布林值、空值、函式、物件
+        //物件:用來包裝資料的容器
+        //建立物件 > 使用物件
+
+        /*let obj = new Object();//建立一個空白的物件   new Object()
+        //建立物件的成員(Member)
+        //物件的屬性(Attribute/Property):成員的資料不是函式
+        obj.x = 3;  //物件.成員名稱 = 資料;
+        obj.y = 4;
+        //物件的方法(Method):成員的資料是函式
+        obj.show = function(){
+            //this是什麼? this是函式的綁定物件(Binding Object)
+            /*
+                this在不同的程式脈絡中，代表不同的東西
+                    情境一:在物件的方法中，this代表物件本身
+                    情境二:在全域的函式中，this代表window物件
+                    情境三:
+                    情境四:
+                    情境五:
+                    情境六:
+            
+            console.log(this.x, this.y);
+        }
+        //使用物件的成員
+        console.log(obj);
+        console.log(obj.x + obj.y);
+        obj.show();
+        
+        /*
+            1.建立一個人的物件，包含以下成員:
+                name:字串，代表姓名
+                age:數字，代表年齡
+                talk:函式，印出姓名和年齡
+            呼叫物件的talk方法
+
+            2.
+                2.1跳出一個確認的對話框，詢問使用者是否刪除
+                2.2使用者點OK的按鈕，在Console印出已刪除
+                2.3使用者點Cancel的按鈕，不做任何事
+        */
+
+        //問題一:
+        let obj = new Object();
+        obj.name = "John";
+        obj.age = 18;
+        obj.show = function(){
+            console.log(this.name, this.age);
+        }
+        obj.show();
+
+        //問題二:
+        let text;
+        if (confirm("是否刪除?") == true) {
+            console.log("已刪除");
+        }
+    </script>
+</body>
+</html>
