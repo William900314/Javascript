@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件Object</title>
+</head>
+<body>
+    <script>
+        //資料:數字、字串、布林值、空值、函式、物件
+        /*建立物件的方法一
+        let point = new object(); //建立空白物件 new Object();
+        point.x = 3; //物件.成員名稱
+        point.y = 4;
+        point.show = function(){
+            console.log(this.x, this.y);
+        };
+        */
+
+        //建立物件的方法二
+        //使用JSON語法建立物件(JavaScript Object Notation)
+        //{成員名稱:資料,成員名稱:資料,...}
+        /*let point = {x:3, y:4, show:function(){
+            console.log(this.x, this.y);
+        }};
+        //使用物件中的成員
+        console.log(point);
+        console.log(point.x + point.y);
+        point.show();*/
+        /*
+            建立一個人的物件，檢查一下成員:
+                name:字串，代表姓名
+                age:數字，代表年齡
+                talk:函式，印出姓名和年齡
+            呼叫talk方法，印出姓名和年齡
+            let obj = new Object();
+            obj.name = "John";
+            obj.age = 18;
+            obj.show = function(){
+                console.log(this.name, this.age);
+            }
+            obj.show();
+        */
+        /*寫成JSON
+        let obj ={name:"John", age:18, show:function(){
+            console.log(this.name, this.age);
+        }};
+        obj.show();
+        */
+        //建立普通的函式，用來包裝製造物件的程序
+        /*
+        function createPointObject(xArg, yArg){
+            let point = new Object();
+            point.x = xArg;
+            point.y = yArg;
+            point.show = function(){
+                console.log(this.x, this.y);
+            };
+            return point;
+        }
+        //呼叫函式製造兩個物件
+        let p1 = createPointObject(3, 4);
+        let p2 = createPointObject(0, 0);
+        console.log(p1, p2);
+        let distance = Math.sqrt(
+            Math.pow(p1.x - p2.x, 2)+
+            Math.pow(p1.y - p2.y, 2)
+        );
+        console.log(distance);
+        */
+
+        //建構函式(constructor):專門用來包裝製造物件的程序
+        /*function Point(xArg, yArg){
+            //自動產生新的空白物件，在建構函式中透過this取得
+            this.x = xArg;
+            this.y = yArg;
+            this.show = function(){
+                console.log(this.x, this.y);
+            };
+            //return this; 自動回傳this
+        }
+        //呼叫建構函式的語法   new 建構函式名稱(參數資料,...)
+        let p1 =new Point(3, 4);
+        let p2 =new Point(0, 0);
+        console.log(p1, p2);
+        */
+
+        /*
+            建立一個人的建構函式，利用建構函式建立兩個人的物件
+            每個人的物件都包含以下成員:
+                name:字串，代表姓名
+                age:數字，代表年齡
+                talk:函式，印出姓名和年齡
+            分別呼叫兩個人物件的talk方法，印出個別的姓名和年齡
+        */
+        /*function Point(xname, yage){
+            this.x = xname;
+            this.y = yage;
+            this.talk = function(){
+                console.log(this.x, this.y);
+            };
+        }
+        let person1 =new Point("John", 18);
+        let person2 =new Point("Josh", 20);
+        console.log(person1, person2);
+        */
+
+        //使用類別class代替建構函式，幫助我們製造同類型的物件
+        /*
+            定義類別
+                class 類別名稱{
+                    constructor(參數列表){
+                        類別的建構函式定義
+                    }
+                }
+            呼叫類別建立對應的物件，具體來說，呼叫類別的建構函式
+                new 類別名稱(參數資料)
+        */
+        /*
+        class Point{
+            constructor(xArg, yArg){
+                this.x = xArg;
+                this.y = yArg;
+                this.show = function(){
+                    console.log(this.x, this.y);
+                };
+            }
+        }
+        let p1 = new Point(3, 4);
+        let p2 = new Point(0, 0);
+        console.log(p1, p2);
+        */
+        
+        //運用內建的物件console操作終端機視窗
+        //console.log(console);
+        //console.info();
+        //console.time();
+        //console.warn();
+
+        //建立、使用多層次的物件
+        let lib = new Object();
+        lib.novel = {};
+        lib.history = {};
+        lib.novel.tom = "湯姆歷險記";
+        lib.history.taiwan = "台灣歷史";
+        lib.history.Japan = "日本歷史";
+        console.log(lib);
+        console.log(lib.history.taiwan);
+    </script>
+</body>
+</html>

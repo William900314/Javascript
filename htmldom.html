@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+<body>
+    <h3>HTML DOM 基本概念</h3>
+    <div id = "content">哈哈哈哈，總算回到畫面上了</div>
+    <button onclick="change();">點我</button>
+    <script>
+        //HTML DOM文件物件複製(Document Object Model)
+        //具體上來講，HTML DOM 就是內建的window物件
+        //console.log(window);
+        //console.log(innerWidth, innerHeight);//(視窗的寬度,視窗的高度)
+        //console.log(screen.height, screen.width);//(螢幕的高度,螢幕的寬度)
+        //console.log(location.href);//(網址列的網址)
+        /*if(innerWidth < 500){
+            location.href = "https://www.google.com.tw";//網址列的網址 = "新的網址"
+        }*/
+        //console.log(document.body.innerHTML);
+        function change(){
+            //1.在程式中取得想要操作的標籤物件 HTML Element
+            //window.document.body.innerHTML = "Hello <u>HTML DOM</u>";
+            //console.log(document.body);
+            //console.dir(document.body);
+            //使用document.querySelector("CSS選擇器)搜尋想要的標籤
+            let element = document.querySelector("#content");
+            console.log(element);
+            //2.針對取得的標籤物件進行操作
+            element.innerHTML = "改變的文字";
+        }
+    </script>
+</body>
+</html>
