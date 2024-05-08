@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>進階的事件處理</title>
+</head>
+<body>
+    <h3>使用JavaScript做事件處理</h3>
+    <!--
+        <button
+            onclick = "console.log('Clicked');"
+            onmouseover = "this.style.color = 'red'"
+            onmouseout = "this.style.color = 'green'"
+        >按鈕</button>
+    -->
+    <button id = "btn">按鈕</button>
+    <script>
+        //事件處裡的要素:要處裡的對象標籤、事件種類的名稱、事件處理函式
+        //事件處理的語法:標籤物件.addEventListener("事件名稱", 事件處理函式)
+        let btn = document.querySelector("#btn");
+        //處理點擊事件，在console印出Clicked
+        //事件發生時，瀏覽器蒐集和事件有關的資訊，產生事件物件Event Object，傳入事件處理函式的第一個參數中
+        let handler = function(ghj){
+            console.log(ghj);
+            console.log(ghj.clientX, ghj.clientY);
+            if(ghj.altKey){
+                btn.removeEventListener("click", handler);
+            }
+        }
+        btn.addEventListener("click", handler);
+        //處理滑鼠移入事件，讓文字變紅色
+        let mouseOverHandler = function(){
+            btn.style.color = "red";
+        }
+        btn.addEventListener("mouseover", mouseOverHandler)
+        //處理滑鼠移出事件，讓文字變綠色
+        let mouseOutHandler = function(){
+            btn.style.color = "green";
+        }
+        btn.addEventListener("mouseout", mouseOutHandler)
+    </script>
+</body>
+</html>

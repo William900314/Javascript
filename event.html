@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件處理 Event Handing</title>
+</head>
+<body>
+    <h3>基本的事件處理</h3>
+    <span
+        onclick = "console.log('點擊');"
+        ondblclick = "console.log('雙擊');"
+        onmousedown = "console.log('滑鼠按下');"
+        onmouseup = "console.log('滑鼠放開');"
+        onmouseover = "console.log('滑鼠移入');"
+        onmouseout = "console.log('滑鼠移出');"
+        onmousemove = "console.log('滑鼠移動');"
+    >點我</span>
+    <span
+        onmouseover = "over(this)"
+        onmouseout = "out(this)"
+        onmousedown = "down(this)"
+        onmouseup = "up(this)"
+    >按鈕一</span>
+    <span
+        onmouseover = "over(this)"
+        onmouseout="out(this)"
+        onmousedown = "down(this)"
+        onmouseup = "up(this)"
+    >按鈕二</span>
+    <script>
+        function over(element){
+            element.style.color = 'red';
+        }
+        function out(element){
+            element.style.color = 'green';
+        }
+        function up(element){
+            element.style.fontWeight = 'normal';
+        }
+        function down(element){
+            element.style.fontWeight = 'bold';
+        }
+    </script>
+</body>
+</html>
