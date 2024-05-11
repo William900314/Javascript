@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字串物件</title>
+</head>
+<body>
+    <h3>字串物件測試</h3>
+    <input type="text" id = "input" />
+    <button onclick="check();">檢查</button>
+    <script>
+        function check(){
+            let input = document.querySelector("#input");
+            let text = input.value;
+            if(text == ""){
+                alert("請輸入文字");
+            }else if(text.length > 20){
+                alert("輸入太多了");
+            }else if(text == "fuck"){
+                alert("請不要說髒話")
+            }else{
+                alert("ok");
+            }
+            //字串，就是字串物件
+            /*
+            let text = "Hello" + "World";
+            console.log("字串的長度", text.length);
+            console.log("取的第2個字元", text.charAt(1));
+            console.log("全部變大寫", text.toUpperCase());
+            console.log("取得子字串 llo", text.substring(2, 5));
+            console.log("abc的位置", text.indexOf("abc"));
+            console.log("ell的位置", text.indexOf("ell"));
+            */
+        }
+    </script>
+</body>
+</html>

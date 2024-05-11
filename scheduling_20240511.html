@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排程 scheduling</title>
+</head>
+<body>
+    <h3>排程工具</h3>
+    <div id="timer">3</div>
+    <script>
+        //等隔一段時間，執行函式 window.setInterval(函式,毫秒);
+        function countdown(){
+            let timer = document.querySelector("#timer");
+            timer.innerHTML = timer.innerHTML-1;
+            if(timer.innerHTML > 0){ //繼續倒數
+                //window.setInterval(countdown, 1000);
+            }else{//倒數結束，做其他事
+                //window.location.href = "https://www.google.com/";
+                timer.innerHTML = "Happy Birthday";
+                console.log("Execute");
+                window.clearInterval(排程編號);
+            }
+        }
+        //Asynchronous 非同步的程式
+        let 排程編號 = window.setInterval(countdown, 1000/* 1000 = 1秒 */);
+        console.log();
+
+        /*
+        //等待一段時間後，執行一次函式window.setTimeout(函式,毫秒)
+        function countdown(){
+            let timer = document.querySelector("#timer");
+            timer.innerHTML = timer.innerHTML-1;
+            if(timer.innerHTML > 0){ //繼續倒數
+                window.setTimeout(countdown, 1000);
+            }else{//倒數結束，做其他事
+                window.location.href = "https://www.google.com/";
+            }
+        }
+        //Asynchronous 非同步的程式
+        window.setTimeout(countdown, 1000 //1000 = 1秒 );
+        */
+    </script>
+</body>
+</html>

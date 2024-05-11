@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 陣列物件</title>
+</head>
+<body>
+    <h3>計算平均數</h3>
+    班上有幾個同學<input type = "text"/>
+    <button onclick="execute()">執行</button>
+    <script>
+        function execute(){
+            //陣列物件:可以按照順序存放資料的容器
+            //建立陣列物件 > 使用陣列物件中的資料
+            //建立陣列物件的語法[資料, 資料, ...]
+
+            //取得老師輸入的學生數量
+            let grades = [];
+            for(let i = 0; i < 3; i++){
+                grades[i] = prompt("輸入學生成績: ", "");
+                grades[i] = parseInt(grades[i]);//把輸入的資料轉成整數
+            }
+            //使用陣列中的資料 陣列[編號]
+            /*
+            console.log(grades);
+            console.log(grades.length);
+            console.log(grades[0] + grades[2]);
+            */
+
+           //使用for迴圈搭配陣列，逐一取得陣列中的資料
+           total = 0;
+           for(i = 0; i < grades.length; i++){
+                total = total + grades[i];
+           }
+           avg = total / grades.length;
+           console.log(avg);
+        }
+    </script>
+</body>
+</html>

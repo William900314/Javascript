@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數學物件</title>
+</head>
+<body>
+    <h3>測試數學物件</h3>
+    <button onclick="execute();">點我</button>
+    <script>
+        function execute(){
+            //console.log("取亂數", Math.random()*40 + 60);
+            let at = 10;
+            //20%的暴擊率
+            if(Math.random() <= 0.2){
+                at *= 2;
+            }
+            console.log(at);
+            /*
+            console.log("圓周率=", Math.PI);
+            console.log("-3的絕對值=", Math.abs(-3));
+            console.log("10的開根號=", Math.sqrt(10));
+            console.log("3的4次方=", Math.pow(3,4));
+            console.log("3.4999四捨五入=", Math.round(3.4999));
+            console.log("3.0001無條件進位=", Math.ceil(3.0001));
+            console.log("3.9999無條件捨去=", Math.floor(3.9999));
+            */
+        }
+    </script>
+</body>
+</html>

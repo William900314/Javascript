@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags</title>
+    <style>
+        .tag{font-weight:normal}
+        .tag-selected{font-weight:bold}
+    </style>
+</head>
+<body>
+    <div>
+        <span onclick="change(this)" class = "tag tag-selected">選項一</span>
+        <span onclick="change(this)" class = "tag">選項二</span>
+        <span onclick="change(this)" class = "tag">選項三</span>
+    </div>
+    <script>
+        function change(clickedTag){
+            //document.querySelectorAll("CSS選擇器")
+            let tags = document.querySelectorAll(".tag");
+            console.log(tags);
+            //把所有標籤都先變成未選擇的樣式 tag
+            //再把點到的那個標籤變成選擇的樣式tag tag-selected
+        }
+    </script>
+</body>
+</html>
